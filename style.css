@@ -1,0 +1,1209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul: #8fc7e9;
+    --azul-claro: #dff1fc;
+    --azul-escuro: #254b62;
+    --preto: #111;
+    --branco: #fff;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 20%, #ffffff 0, transparent 20%),
+        linear-gradient(135deg, #dceefa, #c8e2f3);
+
+    color: var(--preto);
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 20px auto;
+
+    padding: 10px 18px;
+
+    border: 1px solid #446477;
+
+    border-radius: 15px;
+
+    background: rgba(143, 199, 233, .85);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 15px;
+
+    z-index: 50;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: monospace;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 20px;
+
+    margin-right: 7px;
+}
+
+nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    transform: translateY(-3px);
+
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1100px;
+
+    min-height: 620px;
+
+    margin: auto;
+
+    padding: 70px 5%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.mini-titulo {
+    font-family: monospace;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Press Start 2P", monospace;
+
+    font-size: clamp(38px, 6vw, 70px);
+
+    line-height: 1.4;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 2px #111;
+}
+
+.descricao-hero {
+    max-width: 550px;
+
+    margin: 25px 0;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.botoes {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.botao {
+    padding: 13px 20px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border: 2px solid #111;
+
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 5px 5px 0 #111;
+}
+
+.principal {
+    background: #111;
+
+    color: white;
+}
+
+.secundario {
+    background: white;
+
+    color: #111;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+/* =========================
+   IMAGEM
+========================= */
+
+/* =========================
+   IMAGEM
+========================= */
+
+.hero-imagem {
+    height: 470px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forma {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: var(--azul);
+    border: 3px solid #111;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.hero-imagem img {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #111;
+}
+
+
+
+
+
+.fala::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -22px;
+
+    left: 20px;
+
+    width: 35px;
+
+    height: 25px;
+
+    background: white;
+
+    border-left: 3px solid #111;
+
+    border-bottom: 3px solid #111;
+
+    transform: skew(-30deg);
+}
+
+.badge {
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 5%;
+
+    background: #111;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    z-index: 5;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    max-width: 1050px;
+
+    margin: 80px auto;
+
+    padding: 0 5%;
+}
+
+.titulo-secao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.titulo-secao span {
+    font-family: monospace;
+
+    font-size: 14px;
+
+    background: #111;
+
+    color: white;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+}
+
+.titulo-secao h2 {
+    flex: 1;
+
+    text-align: center;
+
+    background: var(--azul);
+
+    border: 1px solid #446477;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: 16px;
+}
+
+.subtitulo {
+    margin-bottom: 25px;
+
+    color: #344e5e;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 30px;
+}
+
+.sobre-texto {
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+}
+
+.frase {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-left: 5px solid #111;
+
+    background: rgba(255,255,255,.5);
+
+    font-style: italic;
+
+    border-radius: 10px;
+}
+
+.frase span {
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+.sobre-card {
+    background: #111;
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 8px 8px 0 var(--azul);
+}
+
+.icone-grande {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.sobre-card h3 {
+    font-family: monospace;
+
+    margin-bottom: 10px;
+}
+
+.status {
+    margin-top: 20px;
+
+    font-size: 12px;
+}
+
+.status span {
+    width: 9px;
+
+    height: 9px;
+
+    background: #7ee787;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.skill-card {
+    background: rgba(255,255,255,.65);
+
+    padding: 20px;
+
+    border: 1px solid #547486;
+
+    border-radius: 15px;
+
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+
+    background: white;
+}
+
+.skill-topo {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.skill-topo span {
+    font-size: 25px;
+}
+
+.skill-topo h3 {
+    font-size: 16px;
+}
+
+.barra {
+    height: 9px;
+
+    background: #c1d7e4;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 8px;
+}
+
+.progresso {
+    height: 100%;
+
+    background: #111;
+
+    border-radius: 10px;
+}
+
+.html {
+    width: 85%;
+}
+
+.css {
+    width: 75%;
+}
+
+.js {
+    width: 55%;
+}
+
+.gestao {
+    width: 90%;
+}
+
+.skill-card small {
+    font-size: 10px;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.projeto-card {
+    background: rgba(255,255,255,.7);
+
+    border: 2px solid #111;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+
+    box-shadow: 8px 8px 0 #111;
+}
+
+.projeto-card.destaque {
+    background: var(--azul);
+}
+
+.numero {
+    position: absolute;
+
+    right: 18px;
+
+    top: 15px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+}
+
+.projeto-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+    font-family: monospace;
+
+    margin-bottom: 12px;
+}
+
+.projeto-card p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    min-height: 120px;
+}
+
+.tags {
+    display: flex;
+
+    gap: 6px;
+
+    flex-wrap: wrap;
+
+    margin: 15px 0;
+}
+
+.tags span {
+    background: #111;
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+}
+
+.ver-projeto {
+    border: none;
+
+    background: transparent;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DIFERENCIAL
+========================= */
+
+.diferencial {
+    max-width: 1050px;
+
+    margin: 100px auto;
+
+    padding: 45px;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    box-shadow: 12px 12px 0 var(--azul);
+}
+
+.diferencial h2 {
+    font-family: "Press Start 2P", monospace;
+
+    line-height: 1.7;
+
+    font-size: 22px;
+}
+
+.diferencial h2 span {
+    color: var(--azul);
+}
+
+.diferencial-texto {
+    line-height: 1.8;
+
+    font-size: 14px;
+}
+
+.check {
+    margin-top: 12px;
+
+    color: var(--azul);
+}
+
+
+/* =========================
+   FORMAÇÃO
+========================= */
+
+.timeline {
+    position: relative;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 3px;
+
+    background: #111;
+}
+
+.timeline-item {
+    display: flex;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+.bolinha {
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+
+    border: 3px solid #111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.timeline-card {
+    background: white;
+
+    border: 1px solid #7895a5;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    flex: 1;
+}
+
+.timeline-card h3 {
+    margin: 7px 0;
+}
+
+.timeline-card p {
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.status-formacao {
+    font-family: monospace;
+
+    font-size: 9px;
+
+    background: #111;
+
+    color: white;
+
+    padding: 5px 8px;
+
+    border-radius: 7px;
+}
+
+.status-formacao.cursando {
+    background: var(--azul-escuro);
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    max-width: 900px;
+
+    margin: 100px auto;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.6);
+
+    border: 2px solid #111;
+
+    border-radius: 25px;
+}
+
+.contato-icon {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.contato h2 {
+    font-family: "Press Start 2P", monospace;
+
+    line-height: 1.7;
+
+    font-size: 25px;
+}
+
+.contato h2 span {
+    color: #426f8b;
+}
+
+.contato > p:not(.mini-titulo) {
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    line-height: 1.7;
+}
+
+.contato-botoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #111;
+
+    color: white;
+
+    margin-top: 100px;
+
+    padding: 50px 6% 20px;
+}
+
+.footer-conteudo {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-logo {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer-conteudo p {
+    color: #bfc8cd;
+
+    font-size: 12px;
+
+    max-width: 300px;
+
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links h4 {
+    color: var(--azul);
+
+    font-family: monospace;
+
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: .2s;
+}
+
+.footer-links a:hover {
+    color: var(--azul);
+}
+
+.footer-bottom {
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #444;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: #999;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.7);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 100;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+
+    width: 90%;
+
+    max-width: 500px;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 3px solid #111;
+
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+
+    right: 15px;
+
+    top: 10px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .topo {
+        position: relative;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 30px;
+    }
+
+    .descricao-hero {
+        margin: 20px auto;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .hero-imagem {
+        height: 400px;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diferencial {
+        grid-template-columns: 1fr;
+
+        margin: 60px 5%;
+
+        padding: 30px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-imagem img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .forma {
+        width: 240px;
+        height: 240px;
+    }
+
+    .fala {
+        right: 0;
+
+        width: 130px;
+
+        height: 80px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 11px;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+    }
+/* ==================================================
+   AJUSTE DAS TELAS DO PORTFÓLIO
+================================================== */
+
+/* Cada seção ocupa praticamente uma tela */
+.hero,
+.secao,
+.diferencial,
+.contato {
+    scroll-margin-top: 20px;
+}
+
+
+/* HOME */
+.hero {
+    min-height: calc(100vh - 80px);
+}
+
+
+/* SOBRE, HABILIDADES, PROJETOS E FORMAÇÃO */
+.secao {
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 100px 5% 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* DIFERENCIAL */
+.diferencial {
+    min-height: 80vh;
+
+    margin: 100px auto;
+
+    align-items: center;
+}
+
+
+/* CONTATO */
+.contato {
+    min-height: 80vh;
+
+    margin: 100px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ==================================================
+   MENU FIXO DURANTE A NAVEGAÇÃO
+================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topo {
+    position: sticky;
+    top: 15px;
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 50px;
+
+        padding-bottom: 80px;
+    }
+
+
+    .secao {
+        min-height: auto;
+
+        padding-top: 100px;
+
+        padding-bottom: 100px;
+    }
+
+
+    .diferencial {
+        min-height: auto;
+
+        margin: 60px 5%;
+
+        padding: 30px;
+    }
+
+
+    .contato {
+        min-height: auto;
+
+        margin: 60px 5%;
+
+        padding: 60px 25px;
+    }
+
+}}
